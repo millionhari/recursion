@@ -1,0 +1,8 @@
+var obj = {
+'peter':'griffin',
+'lois':'griffin',
+'brian':'griffin',
+'amount':5,
+'arr':['meg','sucks', 5],
+'objnexted': {'hello':'this sucks'}
+}
