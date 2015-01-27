@@ -8,17 +8,18 @@ var getElementsByClassName = function(className){
 	var bank = [];
 
 	function lookThrough(element){
-		var children = element.children;
-		for (var i = 0 ; i < children.length ; i++){
-			if(children[i].classList.contains(className)) {
-				bank.push(children[i]);
+		var child = element.children;
+		for (var i = 0 ; i < child.length ; i++){
+			if (child[i].classList.contains(className)){
+				bank.push(child[i]);
 			}
-			if(children[i].hasChildNodes) {
-				lookThrough(children[i]);
+			if (child[i].hasChildNodes()){
+				lookThrough(child[i]);
 			}
 		}
 	}
-	
+
 	lookThrough(document);
+
 	return bank;
 };
